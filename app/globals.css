@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.first{
+  display: flex;
+  justify-content: center;
+}
+
+
+.card {
+  width: 400px;
+  
+}
+
+
+.card__content {
+  text-align: center;
+  position: relative;
+  padding: 15em 5em;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+  transform: rotateY(.5turn);
+}
+
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5em 3em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: grid;
+  align-content: center;
+}
+
+
+.card__back {
+  transform: rotateY(.5turn)
+}
+
+.card__front {
+ background-color: var(--clr);
+ background: url(https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/3epqe4j5HPaZcGrRJ1khrb/0fb6b66f8e5cb2aae058e00064c4148a/GettyImages-1199128740.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000);
+ background-size: cover;
+  background-blend-mode: overlay;
+  color: white;
+}
+
+.card__front::before {
+  content: '';
+  position: absolute;
+  --spacer: 1em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 3px solid currentColor;
+  transform: var(--level-one);
+}
+
+.card__title {
+ font-size: 3.5rem;
+  transform: var(--level-three);
+  order: 2;
+  text-transform: uppercase;
+}
+
+.card__body {
+  transform: translateZ(4rem);
+}
+
+.card__subtitle {
+  transform: var(--level-two);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  font-weight: var(--fw-bold);
+  opacity: .7;
+}
+
+.card__back {
+  transform: rotateY(.5turn);
+  color: #E1D7A0;
+  background: #333;
+}
+
+.main{
+  text-align: center;
+  font-size: 30px;
+  color: #E1D7A0;
+
+}
+
+.earth {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 72px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  transform: translateY(-20%);
+
+}
+
+.earth:after {
+ position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.earth > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 30s linear alternate infinite;
+  background: url(https://www.ncl.ucar.edu/Applications/Scripts/EarthMap_2500x1250.jpg);
+  /*orginal image at https://www.ncl.ucar.edu/Applications/Scripts/EarthMap_2500x1250.jpg */
+  background-size: cover;
+  padding-bottom: 50%;
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.call{
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-top: 2%;
+    padding-bottom: 4%;
+
+}
+
+
+.middle {
+  text-align: center;
+  font-size: 30px;
+  padding:4%;
+}
+
+.community{
+  text-align: center;
+   padding-bottom: 5%;
+      padding-top: 5%;
+}
+
+.earth {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 72px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  transform: translateY(-20%);
+
+}
+
+.earth:after {
+ position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.earth > div {
+  width: 200%;
+  height: 100%;
+  animation: spin 30s linear alternate infinite;
+  background: url(https://www.ncl.ucar.edu/Applications/Scripts/EarthMap_2500x1250.jpg);
+  /*orginal image at https://www.ncl.ucar.edu/Applications/Scripts/EarthMap_2500x1250.jpg */
+  background-size: cover;
+}
+@keyframes spin {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.footer {
+  padding: 30px 0;
+  color: black;
+   font-size:20px;
+  text-align: center;
+  background-color: #E1D7A0;
+  border-top: 1px solid #e5e5e5;
+}
+
+
+.good {
+  color:black;
+  font-style: italic;
+}
+
+
+
